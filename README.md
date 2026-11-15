@@ -11,7 +11,14 @@ samples('github:diegodorado/akwf-waveforms')
 ```
 
 ```javascript
-s("wt_dbass").note("c2 e2 g2")
+n(run(8)).scale("d:ritusen")
+.s("wt_epiano")
+.wtrate(.01)
+.lpf(2000).lpe(3)
+.delay(.5).dfb(.3).room(.3).size(3)
+```
+
+```javascript
 n("[0,2,4,6,8]").scale("g:minor")
 .s("wt_flute")
 .wt(.3).wtrate(.25).wtdepth(.3)
